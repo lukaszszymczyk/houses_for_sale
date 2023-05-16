@@ -1,0 +1,9 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    min-width: 40vw;
+}
+
+.loginFormElement {
+    margin-top: 20px;
+}

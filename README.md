@@ -1,38 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Houses for sale
 
-## Getting Started
+This project includes implementation of application with houses for sale announcements.
 
-First, run the development server:
+## Used technologies
+
+| Tech                                            | Description                                                              |
+|-------------------------------------------------| ------------------------------------------------------------------------ |
+| [NextJS](https://nextjs.org/)                   | Framework providing React-based applications with SSR and SWG            |
+| [React](https://reactjs.org/)                   | Library for building user interfaces                                     |
+| [Firebase](https://firebase.google.com/)        | Set of backend cloud computing (authentication, NoSQL database, storage) |
+| [Typescript](https://www.typescriptlang.org/)   | Javascript superset language                                             |
+| [React Hook Form](https://react-hook-form.com/) | Forms with easy-to-use validation.                                       |
+
+## App functionalities
+- user registration and login (with Facebook, Google and Github providers)
+- presenting a list of houses for sale for logged user
+- form with adding new announcement (integration with Firebase NoSQL database)
+- deleting house announcement
+- uploading file to Firestore
+
+
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/lukaszszymczyk/houses_for_sale
+npm install
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Example of .env file:
+```bash
+#Firebase configuration
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+FIREBASE_API_KEY=
+FIREBASE_AUTH_DOMAIN=
+FIREBASE_PROJECT_ID=
+FIREBASE_STORAGE_BUCKET=
+FIREBASE_MESSAGING_SENDER_ID=
+FIREBASE_APP_ID=
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Available scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Command                   | Description                   |
+| ------------------------- | ----------------------------- |
+| `npm run dev`             | Open local server             |
+| `npm run build`           | Create optimized build        |
+| `npm run start`           | Start with production mode    |
 
-## Learn More
+## Live
 
-To learn more about Next.js, take a look at the following resources:
+https://houses-for-sale-lukaszszymczyk.vercel.app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshots
+Product list view:
+<p align="center" style="padding: 0 16px">
+<img width="600" alt="Screen shot" src="https://github.com/lukaszszymczyk/houses_for_sale/assets/15704051/c38034b4-db39-4e33-bc06-5c7cbdc1ef6c"></p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Product details view:
+<p align="center" style="padding: 0 16px">
+    <img width="600" src="https://github.com/lukaszszymczyk/houses_for_sale/assets/15704051/a72a5706-eede-4d49-bf91-56bef383668a" alt="Screen Shot">
+</p>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Search product by a phrase:
+<p align="center" style="padding: 0 16px">
+    <img width="600" src="https://github.com/lukaszszymczyk/houses_for_sale/assets/15704051/f74ee6d0-8ab0-4b26-a4f6-337e34a515f1" alt="Screen Shot">
+</p>
